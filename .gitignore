@@ -104,7 +104,6 @@ compiled_types/
 
 .DS_Store
 tmp/
-*.js
 *.js.map
 
 # Byte-compiled / optimized / DLL files
