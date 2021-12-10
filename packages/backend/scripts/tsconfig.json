@@ -1,0 +1,32 @@
+{
+    "ts-node": {
+        "files": true,
+        "transpileOnly": true,
+        "moduleTypes": {
+            "*.ts": "cjs"
+        },
+        "compilerOptions": {
+            "module": "commonjs"
+        },
+        "cwd": "REPLACE_ME/packages/backend/scripts",
+        "projectSearchDir": "REPLACE_ME/packages/backend/scripts",
+        "require": [],
+        "project": "REPLACE_ME/packages/backend/scripts/tsconfig.json"
+    },
+    "compilerOptions": {
+        "lib": ["es2021"],
+        "module": "esnext",
+        "target": "es2021",
+        "strict": true,
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true,
+        "sourceMap": true,
+        "inlineSourceMap": false,
+        "inlineSources": true,
+        "declaration": false,
+        "noEmit": false,
+        "outDir": "./.ts-node"
+    },
+    "files": ["generate-db.ts"]
+}

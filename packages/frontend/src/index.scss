@@ -1,0 +1,22 @@
+/**
+ * Copyright (c) 2021 - REPLACE_ME, Inc
+ */
+
+@import "./styles/variables";
+
+body {
+    color: $font-color;
+    display: flex;
+    font-family: "Roboto", sans-serif;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    width: 100vw;
+}
+
+.root {
+    background: $background;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
