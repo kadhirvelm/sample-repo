@@ -2,12 +2,33 @@
  * Copyright (c) 2021 - REPLACE_ME, Inc
  */
 
+import { SampleServiceFrontend } from "@sample/api";
 import React from "react";
 import ReactDOM from "react-dom";
+import { checkIsError } from "./utility/alertOnError";
 import "./index.scss";
 
 const HelloWorld: React.FC<{}> = () => {
-    return <div>Hello world!</div>;
+    const [endpointValue, setEndpointValue] = React.useState<string | undefined>(undefined);
+
+    const loadEndpoint = async () => {
+        const loadedValue = checkIsError(
+            await SampleServiceFrontend.sampleEndpoint({ samplePayload: "Sent from the browser!" }),
+        );
+        if (loadedValue === undefined) {
+            return;
+        }
+
+        const { newPayload } = loadedValue;
+
+        setEndpointValue(newPayload);
+    };
+
+    React.useEffect(() => {
+        loadEndpoint();
+    }, []);
+
+    return <div>Hello world! {endpointValue}</div>;
 };
 
 ReactDOM.render(<HelloWorld />, document.getElementById("root"));

@@ -65,6 +65,8 @@ module.exports = {
         "no-restricted-globals": 0,
         "no-console": ["warn"],
         "react-hooks/exhaustive-deps": 0,
+        "@typescript-eslint/no-unsafe-argument": 0,
+        "react/jsx-filename-extension": 0,
     },
 
     settings: {

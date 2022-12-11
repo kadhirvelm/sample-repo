@@ -11,7 +11,7 @@ import { ensureDirectoryExists } from "./utils/ensureDirectoryExists";
 import { generateSourceMap } from "./utils/generateSourceMap";
 
 // eslint-disable-next-line func-names
-export default async function (this: webpack.loader.LoaderContext, src: string) {
+export default async function (this: webpack.LoaderContext<{}>, src: string) {
     const async = this.async();
 
     if (async === undefined) {

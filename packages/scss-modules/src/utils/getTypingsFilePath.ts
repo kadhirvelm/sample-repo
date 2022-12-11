@@ -6,7 +6,7 @@ import * as path from "path";
 import { getOptions } from "loader-utils";
 import * as webpack from "webpack";
 
-export function getTypingsFilePath(this: webpack.loader.LoaderContext) {
+export function getTypingsFilePath(this: webpack.LoaderContext<{}>) {
     const options = getOptions(this);
 
     const srcPath =
