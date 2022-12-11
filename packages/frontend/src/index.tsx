@@ -2,7 +2,6 @@
  * Copyright (c) 2021 - REPLACE_ME, Inc
  */
 
-import "antd/dist/antd.css";
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.scss";

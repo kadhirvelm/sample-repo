@@ -1,0 +1,25 @@
+version: "3.9"
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: ./packages/backend/Dockerfile
+    container_name: backend
+    ports:
+      - "3002:3002"
+    volumes:
+      - ./:/usr/sample-repo:rw
+    working_dir: /usr/sample-repo/packages/backend
+    command: yarn dev
+  frontend:
+    build:
+      context: .
+      dockerfile: ./packages/frontend/Dockerfile
+    container_name: frontend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./:/usr/sample-repo:rw
+    working_dir: /usr/sample-repo/packages/frontend
+    command: yarn dev

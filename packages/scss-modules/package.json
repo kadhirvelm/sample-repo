@@ -6,10 +6,10 @@
     "typings": "dist/index.d.ts",
     "repository": "REPLACE_ME",
     "dependencies": {
-        "fs-extra": "^9.1.0",
-        "loader-utils": "^2.0.0",
-        "source-map": "^0.7.3",
-        "webpack": "^4.46.0"
+        "fs-extra": "^11.1.0",
+        "loader-utils": "^3.2.1",
+        "source-map": "^0.7.4",
+        "webpack": "^5.75.0"
     },
     "scripts": {
         "build": "tsc -d",
@@ -19,9 +19,9 @@
         "lint:fix": "yarn lint --fix"
     },
     "devDependencies": {
-        "@types/fs-extra": "9.0.12",
+        "@types/fs-extra": "9.0.13",
         "@types/loader-utils": "^2.0.3",
         "@types/source-map": "^0.5.7",
-        "typescript": "^4.3.5"
+        "typescript": "^4.9.4"
     }
 }
